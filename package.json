@@ -1,0 +1,29 @@
+{
+  "name": "botica-bot-restest-proxy",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isa-group/botica-bot-restest-proxy.git"
+  },
+  "author": "Alberto Mimbrero",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.9",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.2"
+  }
+}
