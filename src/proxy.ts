@@ -7,7 +7,7 @@ import {
 import { IncomingMessage } from "node:http";
 
 export interface ProxyOptions {
-  responseCallback?: (
+  responseInterceptor?: (
     req: IncomingMessage,
     target: string,
     res: IncomingMessage,
@@ -26,7 +26,7 @@ export const createProxy = (proxyOptions: ProxyOptions) => {
     logger.debug(`Redirecting request to ${target}${req.url}...`);
 
     const interceptor = responseInterceptor((buffer, proxyRes, req) => {
-      proxyOptions.responseCallback?.(
+      proxyOptions.responseInterceptor?.(
         req,
         target,
         proxyRes,

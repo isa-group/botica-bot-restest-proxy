@@ -13,7 +13,7 @@ export const notifyUser = async (message: string) => {
 };
 
 createProxy({
-  responseCallback: async (
+  responseInterceptor: async (
     req: IncomingMessage,
     target: string,
     res: IncomingMessage,

@@ -29,8 +29,8 @@ export const handleQuotaError: HandlerFunction = async (
 
   await bot.publishOrder(
     { service: host, until: now.getTime() + quotaErrorTimeout },
-    "generation_adjustment",
-    "restrict_generation",
+    "generator_bots_advice",
+    "pause_generation",
   );
   lastErrors[host] = now;
 };
